@@ -1,0 +1,150 @@
+/* styles.css */
+:root {
+  --primary-blue: #1a73e8;
+  --secondary-teal: #00bcd4;
+}
+
+/* Base Styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background-color: #f8f9fa;
+}
+
+/* Header */
+.journey-header {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-teal));
+  color: white;
+}
+
+.journey-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+/* Central Gradient Line */
+.central-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--primary-blue), var(--secondary-teal));
+  z-index: 1;
+}
+
+/* Journey Container */
+.journey-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+/* Phase Blocks */
+.phase-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 60px 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* Content Styling */
+.phase-content {
+  width: 45%;
+  position: relative;
+}
+
+.phase-text {
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.phase-text h2 {
+  color: var(--primary-blue);
+  margin-bottom: 15px;
+}
+
+/* Image Styling */
+.phase-image {
+  width: 45%;
+}
+
+.phase-image img {
+  width: 70%;
+  border-radius: 5px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Touchpoints */
+.touchpoint {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: var(--secondary-teal);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.left .touchpoint {
+  right: -60px;
+}
+
+.right .touchpoint {
+  left: -60px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .phase-block {
+      flex-direction: column;
+      margin: 40px 0;
+  }
+
+  .phase-content,
+  .phase-image {
+      width: 100%;
+      margin: 20px 0;
+  }
+
+  .touchpoint {
+      display: none;
+  }
+
+  .central-line {
+      display: none;
+  }
+}
+
+
+/* Interactive Elements */
+.cta-button {
+  display: inline-block;
+  padding: 12px 32px;
+  background: white;
+  color: var(--primary-blue);
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.cta-button:hover {
+  background: var(--primary-blue);
+  color: white;
+  border-color: white;
+}

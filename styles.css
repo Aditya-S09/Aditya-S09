@@ -1,0 +1,176 @@
+/* styles.css */
+/* Base Styles */
+:root {
+  --primary-blue: #1a73e8;
+  --secondary-teal: #00bcd4;
+  --dark-bg: #2d3436;
+  --light-bg: #f8f9fa;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-teal));
+  color: white;
+  padding: 120px 0;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.tagline {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+/* Strategy Grid */
+.strategy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.strategy-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.strategy-card:hover {
+  transform: translateY(-5px);
+}
+
+.strategy-card h3 {
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+}
+
+/* User Journey */
+.journey-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.step {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(26, 115, 232, 0.05);
+  border-radius: 12px;
+}
+
+.step-icon {
+  width: 50px;
+  height: 50px;
+  background: var(--primary-blue);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-weight: 700;
+}
+
+/* AI Landscape Section */
+.ai-landscape {
+  background-color: var(--light-bg); /* Light background for contrast */
+  padding: 50px 20px;
+  text-align: center; /* Center the content */
+}
+
+.ai-landscape h2 {
+  text-align: center;
+  font-size: 2.5rem; /* Larger font for the heading */
+  color: var(--primary-blue); /* Use primary blue color */
+  margin-bottom: 20px;
+}
+
+.stats-grid {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  gap: 30px; /* Add spacing between cards */
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+}
+
+.stat-card {
+  background-color: var(--white); /* White background for cards */
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-10px); /* Lift card on hover */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.stat-card h3 {
+  color: var(--primary-blue);
+  font-size: 2rem; /* Larger font size for emphasis */
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  font-size: 1.2rem;
+  color: var(--dark-bg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .journey-steps {
+      grid-template-columns: 1fr;
+  }
+  
+  .strategy-grid {
+      grid-template-columns: 1fr;
+  }
+  
+  .hero-content h1 {
+      font-size: 2rem;
+  }
+}
+
+/* Interactive Elements */
+.cta-button {
+  display: inline-block;
+  padding: 12px 32px;
+  background: white;
+  color: var(--primary-blue);
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.cta-button:hover {
+  background: var(--primary-blue);
+  color: white;
+  border-color: white;
+}
